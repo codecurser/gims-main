@@ -106,6 +106,10 @@ export default {
         "glow": {
           "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary-glow) / 0.3)" },
           "50%": { boxShadow: "0 0 40px hsl(var(--primary-glow) / 0.5)" }
+        },
+        "scale": {
+          "0%, 100%": { transform: "scale(1.05)" },
+          "50%": { transform: "scale(1.08)" }
         }
       },
       animation: {

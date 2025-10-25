@@ -26,13 +26,13 @@ const Mission = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-section">
+    <section id="about" className="py-32 bg-gradient-section">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
             Empowering the Next Generation of Biotech Leaders
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             At GIMS Bioincubator, we believe that the future of biotechnology is built on 
             collaboration, innovation, and unwavering support for visionary entrepreneurs.
           </p>
@@ -42,14 +42,14 @@ const Mission = () => {
           {values.map((value, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-card border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
+              className="group p-10 bg-gradient-card border border-border/50 hover:border-primary/20 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                <value.icon className="text-primary" size={28} />
+              <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <value.icon className="text-primary-foreground" size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">{value.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 tracking-tight">{value.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-base">{value.description}</p>
             </Card>
           ))}
         </div>

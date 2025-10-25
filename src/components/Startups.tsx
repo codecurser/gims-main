@@ -42,53 +42,53 @@ const Startups = () => {
   ];
 
   return (
-    <section id="startups" className="py-24 bg-gradient-section">
+    <section id="startups" className="py-32 bg-gradient-section">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
             Our Innovation Portfolio
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Meet the pioneering companies we're proud to support. Each one is transforming their 
             sector through innovative biotechnology solutions.
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {stats.map((stat, index) => (
             <Card 
               key={index}
-              className="p-6 text-center bg-card hover:shadow-md transition-all animate-scale-in"
+              className="p-8 text-center bg-gradient-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-scale-in hover:-translate-y-1"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                <stat.icon className="text-primary" size={24} />
+              <div className="w-14 h-14 bg-gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md">
+                <stat.icon className="text-primary-foreground" size={28} />
               </div>
-              <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+              <div className="text-4xl font-bold text-foreground mb-2">{stat.value}</div>
+              <div className="text-sm font-medium text-muted-foreground">{stat.label}</div>
             </Card>
           ))}
         </div>
 
         {/* Startup Cards */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {startups.map((startup, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
+              className="p-10 bg-gradient-card border border-border/50 hover:border-primary/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{startup.name}</h3>
-                  <Badge className={startup.color}>{startup.sector}</Badge>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 tracking-tight">{startup.name}</h3>
+                  <Badge className={`${startup.color} text-xs font-semibold px-3 py-1`}>{startup.sector}</Badge>
                 </div>
-                <Badge variant="outline">{startup.funding}</Badge>
+                <Badge variant="outline" className="font-semibold border-2">{startup.funding}</Badge>
               </div>
-              <p className="text-muted-foreground mb-4">{startup.achievement}</p>
-              <div className="flex items-center text-sm text-primary font-medium">
-                <TrendingUp size={16} className="mr-2" />
+              <p className="text-muted-foreground mb-6 leading-relaxed">{startup.achievement}</p>
+              <div className="flex items-center text-sm text-primary font-semibold group-hover:translate-x-1 transition-transform">
+                <TrendingUp size={18} className="mr-2" />
                 Growing rapidly
               </div>
             </Card>
