@@ -34,39 +34,39 @@ const Facilities = () => {
   return (
     <section id="facilities" className="py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 tracking-tight">
+        <div className="text-center max-w-4xl mx-auto mb-24 animate-fade-in">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-8 tracking-tight text-center">
             World-Class Infrastructure
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto">
             Access cutting-edge facilities designed to support every stage of your biotech journey, 
             from early research to commercial production.
           </p>
         </div>
 
         {/* Featured Image */}
-        <div className="mb-20 rounded-3xl overflow-hidden shadow-2xl animate-scale-in border border-border/50">
+        <div className="mb-24 rounded-3xl overflow-hidden shadow-2xl animate-scale-in border border-border/50 max-w-5xl mx-auto">
           <img 
             src={facilityImage} 
             alt="State-of-the-art biotechnology laboratory facility" 
-            className="w-full h-[450px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+            className="w-full h-[500px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700"
           />
         </div>
 
         {/* Facility Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {facilities.map((facility, index) => (
             <Card 
               key={index}
-              className="p-8 bg-gradient-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 group animate-fade-in-up hover:-translate-y-2"
+              className="p-10 bg-gradient-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 group animate-fade-in-up hover:-translate-y-3 text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 bg-gradient-hero rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                <facility.icon className="text-primary-foreground" size={26} />
+              <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg mx-auto">
+                <facility.icon className="text-primary-foreground" size={30} />
               </div>
-              <Badge variant="secondary" className="mb-4 font-semibold">{facility.badge}</Badge>
-              <h3 className="text-xl font-serif font-bold text-foreground mb-4 tracking-tight">{facility.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{facility.description}</p>
+              <Badge variant="secondary" className="mb-5 font-semibold text-sm">{facility.badge}</Badge>
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-5 tracking-tight text-center">{facility.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-center">{facility.description}</p>
             </Card>
           ))}
         </div>

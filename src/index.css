@@ -20,17 +20,17 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 15%;
 
-    /* Deep Sky Blue - #00BFFF theme */
-    --primary: 195 100% 50%;
+    /* Professional Navy Blue - #1e3a8a theme */
+    --primary: 220 100% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 195 100% 70%;
+    --primary-glow: 220 100% 55%;
 
-    /* Bio Green - growth and innovation */
-    --secondary: 150 65% 45%;
+    /* Professional Teal - growth and innovation */
+    --secondary: 180 60% 40%;
     --secondary-foreground: 0 0% 100%;
     
-    /* Innovation Teal - modern tech */
-    --accent: 180 70% 50%;
+    /* Professional Emerald - modern tech */
+    --accent: 160 70% 45%;
     --accent-foreground: 0 0% 100%;
 
     --muted: 210 25% 95%;
@@ -41,20 +41,20 @@ All colors MUST be HSL.
 
     --border: 210 20% 88%;
     --input: 210 20% 92%;
-    --ring: 195 100% 50%;
+    --ring: 220 100% 35%;
 
     --radius: 0.75rem;
 
-    /* Gradients for depth and visual interest */
-    --gradient-hero: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(195 100% 70%) 100%);
+    /* Professional gradients for depth and visual interest */
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 35%) 0%, hsl(180 60% 40%) 100%);
     --gradient-section: linear-gradient(180deg, hsl(210 30% 98%) 0%, hsl(0 0% 100%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(195 20% 97%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 20% 97%) 100%);
     
     /* Shadows for elevation */
     --shadow-sm: 0 2px 8px hsl(210 25% 15% / 0.05);
     --shadow-md: 0 4px 16px hsl(210 25% 15% / 0.08);
     --shadow-lg: 0 8px 32px hsl(210 25% 15% / 0.12);
-    --shadow-glow: 0 0 32px hsl(195 100% 70% / 0.15);
+    --shadow-glow: 0 0 32px hsl(220 100% 55% / 0.15);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,14 +71,14 @@ All colors MUST be HSL.
     --popover: 220 25% 12%;
     --popover-foreground: 210 30% 95%;
 
-    --primary: 195 100% 60%;
+    --primary: 220 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 195 100% 80%;
+    --primary-glow: 220 100% 70%;
 
-    --secondary: 150 65% 50%;
+    --secondary: 180 60% 50%;
     --secondary-foreground: 0 0% 100%;
     
-    --accent: 180 70% 55%;
+    --accent: 160 70% 55%;
     --accent-foreground: 0 0% 100%;
 
     --muted: 220 20% 18%;
@@ -89,16 +89,16 @@ All colors MUST be HSL.
 
     --border: 220 20% 20%;
     --input: 220 20% 18%;
-    --ring: 195 100% 60%;
+    --ring: 220 100% 50%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(195 100% 40%) 0%, hsl(195 100% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 30%) 0%, hsl(180 60% 40%) 100%);
     --gradient-section: linear-gradient(180deg, hsl(220 25% 8%) 0%, hsl(220 25% 12%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(220 25% 12%) 0%, hsl(220 25% 15%) 100%);
     
     --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
     --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
     --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 32px hsl(195 100% 80% / 0.3);
+    --shadow-glow: 0 0 32px hsl(220 100% 70% / 0.3);
   }
 }
 
