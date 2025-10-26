@@ -79,8 +79,10 @@ export default {
         'glow': 'var(--shadow-glow)',
       },
       transitionTimingFunction: {
-        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'smooth': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        'elegant': 'cubic-bezier(0.23, 1, 0.32, 1)',
+        'quick': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
       keyframes: {
         "accordion-down": {
@@ -92,16 +94,20 @@ export default {
           to: { height: "0" },
         },
         "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
         "fade-in-up": {
-          "0%": { opacity: "0", transform: "translateY(40px)" },
+          "0%": { opacity: "0", transform: "translateY(60px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
         "scale-in": {
-          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "0%": { opacity: "0", transform: "scale(0.9)" },
           "100%": { opacity: "1", transform: "scale(1)" }
+        },
+        "slide-in-elegant": {
+          "0%": { opacity: "0", transform: "translateX(-40px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" }
         },
         "slide-in": {
           "0%": { opacity: "0", transform: "translateX(-20px)" },
@@ -135,10 +141,11 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s ease-out",
-        "fade-in-up": "fade-in-up 0.8s ease-out",
-        "scale-in": "scale-in 0.4s ease-out",
-        "slide-in": "slide-in 0.5s ease-out",
+        "fade-in": "fade-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "fade-in-up": "fade-in-up 1s cubic-bezier(0.23, 1, 0.32, 1)",
+        "scale-in": "scale-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "slide-in": "slide-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "slide-in-elegant": "slide-in-elegant 0.9s cubic-bezier(0.23, 1, 0.32, 1)",
         "glow": "glow 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",

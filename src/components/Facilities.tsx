@@ -32,9 +32,19 @@ const Facilities = () => {
   ];
 
   return (
-    <section id="facilities" className="py-32 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="facilities" className="py-32 bg-background relative overflow-hidden">
+      {/* Professional Background Elements */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-hero rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-secondary to-accent rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto mb-24 animate-fade-in">
+          <div className="inline-block mb-6">
+            <div className="w-20 h-0.5 bg-gradient-hero mx-auto mb-4"></div>
+            <span className="text-sm font-medium text-primary tracking-wider uppercase">Infrastructure</span>
+          </div>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-8 tracking-tight text-center">
             World-Class Infrastructure
           </h2>
@@ -44,29 +54,35 @@ const Facilities = () => {
           </p>
         </div>
 
-        {/* Featured Image */}
-        <div className="mb-24 rounded-3xl overflow-hidden shadow-2xl animate-scale-in border border-border/50 max-w-5xl mx-auto">
+        {/* Enhanced Featured Image */}
+        <div className="mb-24 rounded-3xl overflow-hidden shadow-2xl animate-scale-in border border-border/40 max-w-5xl mx-auto relative group">
           <img 
             src={facilityImage} 
             alt="State-of-the-art biotechnology laboratory facility" 
-            className="w-full h-[500px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700"
+            className="w-full h-[500px] md:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
 
-        {/* Facility Cards */}
+        {/* Enhanced Facility Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {facilities.map((facility, index) => (
             <Card 
               key={index}
-              className="p-10 bg-gradient-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 group animate-fade-in-up hover:-translate-y-3 text-center"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="p-10 bg-gradient-card border border-border/40 hover:border-primary/25 hover:shadow-2xl transition-all duration-700 group animate-fade-in-up hover:-translate-y-4 text-center relative overflow-hidden"
+              style={{ animationDelay: `${index * 0.12}s` }}
             >
-              <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg mx-auto">
-                <facility.icon className="text-primary-foreground" size={30} />
+              {/* Subtle Background Accent */}
+              <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-hero opacity-5 rounded-full -translate-y-12 -translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-xl mx-auto">
+                  <facility.icon className="text-primary-foreground" size={30} />
+                </div>
+                <Badge variant="secondary" className="mb-5 font-semibold text-sm">{facility.badge}</Badge>
+                <h3 className="text-2xl font-serif font-bold text-foreground mb-5 tracking-tight text-center">{facility.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-center">{facility.description}</p>
               </div>
-              <Badge variant="secondary" className="mb-5 font-semibold text-sm">{facility.badge}</Badge>
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-5 tracking-tight text-center">{facility.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-center">{facility.description}</p>
             </Card>
           ))}
         </div>
