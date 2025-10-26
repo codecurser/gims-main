@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logoImage from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,13 +37,17 @@ const Navbar = () => {
     } border-b border-border/50`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">GB</span>
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={logoImage} 
+                alt="GIMS Medical Innovation Hub Logo" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">GIMS Bioincubator</h1>
-              <p className="text-xs text-muted-foreground">Innovating Life Sciences</p>
+              <h1 className="text-xl font-bold text-foreground">GIMS Medical Innovation Hub</h1>
+              <p className="text-xs text-muted-foreground">Transforming Healthcare</p>
             </div>
           </div>
 

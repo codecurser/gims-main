@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import logoImage from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -9,17 +10,21 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">GB</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src={logoImage} 
+                  alt="GIMS Medical Innovation Hub Logo" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div>
-                <h3 className="font-bold text-lg">GIMS Bioincubator</h3>
-                <p className="text-xs opacity-75">Innovating Life Sciences</p>
+                <h3 className="font-bold text-lg">GIMS Medical Innovation Hub</h3>
+                <p className="text-xs opacity-75">Transforming Healthcare</p>
               </div>
             </div>
             <p className="text-sm opacity-75 leading-relaxed">
-              Empowering biotech entrepreneurs to transform breakthrough research into impactful solutions.
+              Empowering healthcare startups to revolutionize patient care through cutting-edge medical technology and innovation.
             </p>
           </div>
 
@@ -87,7 +92,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm opacity-75">
-          <p>&copy; 2025 GIMS Bioincubator. All rights reserved.</p>
+          <p>&copy; 2025 GIMS Medical Innovation Hub. All rights reserved.</p>
           <div className="flex space-x-6">
             <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
             <a href="#" className="hover:opacity-100 transition-opacity">Terms of Service</a>
