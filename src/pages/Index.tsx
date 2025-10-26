@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import ImageCarousel from "@/components/ImageCarousel";
-import Hero from "@/components/Hero";
 import Mission from "@/components/Mission";
 import Facilities from "@/components/Facilities";
 import Startups from "@/components/Startups";
@@ -13,7 +12,6 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <ImageCarousel />
-      <Hero />
       <Mission />
       <Facilities />
       <Startups />
