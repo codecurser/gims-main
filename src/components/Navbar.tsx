@@ -46,8 +46,8 @@ const Navbar = () => {
               />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">GIMS Medical Innovation Hub</h1>
-              <p className="text-xs text-muted-foreground">Transforming Healthcare</p>
+              <h1 className="text-xl font-bold text-foreground">GIMS Startup Clinic</h1>
+              <p className="text-xs text-muted-foreground">Medical Innovation Hub</p>
             </div>
           </div>
 

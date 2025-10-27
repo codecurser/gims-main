@@ -68,7 +68,7 @@ const Startups = () => {
   ];
 
   return (
-    <section id="startups" className="py-32 bg-gradient-section relative overflow-hidden">
+    <section id="startups" className="py-16 bg-gradient-section relative overflow-hidden">
       {/* Medical-themed background */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -76,22 +76,22 @@ const Startups = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-5xl mx-auto mb-24 animate-fade-in">
-          <div className="inline-block mb-6">
-            <div className="w-20 h-0.5 bg-gradient-hero mx-auto mb-4"></div>
+        <div className="text-center max-w-5xl mx-auto mb-12 animate-fade-in">
+          <div className="inline-block mb-4">
+            <div className="w-20 h-0.5 bg-gradient-hero mx-auto mb-2"></div>
             <span className="text-sm font-medium text-primary tracking-wider uppercase">Healthcare Innovation</span>
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-8 tracking-tight text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 tracking-tight text-center">
             Our Medical Innovation Portfolio
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
             Meet the pioneering healthcare companies we're proud to support. Each one is transforming 
             patient care through innovative medical technology and breakthrough treatments.
           </p>
         </div>
 
         {/* Enhanced Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <Card 
               key={index}

@@ -8,66 +8,66 @@ import { TrendingUp, Users, DollarSign, Award, ArrowRight, Star } from "lucide-r
 const Startups = () => {
   const portfolioCompanies = [
     {
-      name: "NeuroTech Solutions",
-      description: "Developing AI-powered diagnostic tools for neurological disorders",
-      stage: "Series A",
-      funding: "$15M",
-      employees: "25",
-      founded: "2022",
-      logo: "NT"
-    },
-    {
-      name: "BioCell Innovations",
-      description: "Revolutionary stem cell therapies for regenerative medicine",
-      stage: "Seed",
-      funding: "$8M",
-      employees: "18",
+      name: "MedInnovate Solutions",
+      description: "AI-powered diagnostic tools for early disease detection and prevention",
+      stage: "Incubation",
+      funding: "₹2.5Cr",
+      employees: "8",
       founded: "2023",
-      logo: "BC"
+      logo: "MI"
     },
     {
-      name: "GeneFlow Therapeutics",
-      description: "Next-generation gene editing technologies for rare diseases",
-      stage: "Series B",
-      funding: "$32M",
-      employees: "45",
-      founded: "2021",
-      logo: "GF"
-    },
-    {
-      name: "MediSense Labs",
-      description: "Wearable biosensors for continuous health monitoring",
-      stage: "Pre-Seed",
-      funding: "$3M",
+      name: "CareConnect Technologies",
+      description: "Telemedicine platform connecting rural patients with urban specialists",
+      stage: "Incubation",
+      funding: "₹1.8Cr",
       employees: "12",
-      founded: "2024",
-      logo: "MS"
-    },
-    {
-      name: "PharmaAI",
-      description: "Machine learning platform for drug discovery optimization",
-      stage: "Series A",
-      funding: "$22M",
-      employees: "35",
-      founded: "2022",
-      logo: "PA"
-    },
-    {
-      name: "Cellular Dynamics",
-      description: "Advanced cell culture systems for personalized medicine",
-      stage: "Seed",
-      funding: "$12M",
-      employees: "28",
       founded: "2023",
-      logo: "CD"
+      logo: "CC"
+    },
+    {
+      name: "HealthTrack Devices",
+      description: "Wearable medical devices for chronic disease management",
+      stage: "Early Stage",
+      funding: "₹95L",
+      employees: "6",
+      founded: "2024",
+      logo: "HT"
+    },
+    {
+      name: "SmartTherapy Systems",
+      description: "IoT-enabled rehabilitation equipment with remote monitoring",
+      stage: "Incubation",
+      funding: "₹1.5Cr",
+      employees: "10",
+      founded: "2023",
+      logo: "ST"
+    },
+    {
+      name: "RapidLab Diagnostics",
+      description: "Point-of-care diagnostic devices for faster disease detection",
+      stage: "Early Stage",
+      funding: "₹80L",
+      employees: "5",
+      founded: "2024",
+      logo: "RL"
+    },
+    {
+      name: "MedSupply Chain",
+      description: "Blockchain-based solution for pharmaceutical supply chain transparency",
+      stage: "Incubation",
+      funding: "₹2.2Cr",
+      employees: "9",
+      founded: "2023",
+      logo: "MS"
     }
   ];
 
   const successMetrics = [
-    { label: "Portfolio Companies", value: "50+", icon: TrendingUp },
-    { label: "Total Funding Raised", value: "$500M+", icon: DollarSign },
-    { label: "Jobs Created", value: "800+", icon: Users },
-    { label: "Patents Filed", value: "150+", icon: Award }
+    { label: "Incubated Startups", value: "12+", icon: TrendingUp },
+    { label: "Total Funding Raised", value: "₹10Cr+", icon: DollarSign },
+    { label: "Jobs Created", value: "60+", icon: Users },
+    { label: "IPs Filed", value: "25+", icon: Award }
   ];
 
   return (
@@ -82,11 +82,11 @@ const Startups = () => {
               Our Portfolio
             </Badge>
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              Building Tomorrow's Biotech Leaders
+              Building Tomorrow's Medical Innovators
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Discover the innovative startups we're nurturing and the groundbreaking technologies 
-              they're developing to transform healthcare and biotechnology.
+              Discover the innovative startups we're incubating and the groundbreaking healthcare technologies 
+              they're developing to transform patient care and medical innovation.
             </p>
           </div>
         </div>
@@ -110,12 +110,12 @@ const Startups = () => {
       </section>
 
       {/* Portfolio Companies */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Portfolio Companies</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Meet the innovative startups that are shaping the future of biotechnology
+              Meet the innovative startups that are shaping the future of medical innovation
             </p>
           </div>
           
@@ -170,7 +170,7 @@ const Startups = () => {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Success Stories</h2>
@@ -187,21 +187,21 @@ const Startups = () => {
                     <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                   ))}
                 </div>
-                <CardTitle className="text-xl font-serif">NeuroTech Solutions</CardTitle>
-                <CardDescription className="text-primary font-medium">Series A Success</CardDescription>
+                <CardTitle className="text-xl font-serif">MedInnovate Solutions</CardTitle>
+                <CardDescription className="text-primary font-medium">Incubation Success</CardDescription>
               </CardHeader>
               <CardContent>
                 <blockquote className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  "GIMS Bioincubator provided us with the perfect environment to develop our AI diagnostic platform. 
-                  Their facilities, mentorship, and network connections were instrumental in securing our Series A funding."
+                  "GIMS Startup Clinic provided us with invaluable clinical insights from experienced doctors. 
+                  Their mentorship and access to hospital infrastructure helped us refine our AI diagnostic platform and prepare for clinical trials."
                 </blockquote>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-bold text-primary">JS</span>
+                    <span className="text-sm font-bold text-primary">RP</span>
                   </div>
                   <div>
-                    <div className="font-semibold">Dr. Jane Smith</div>
-                    <div className="text-sm text-muted-foreground">CEO, NeuroTech Solutions</div>
+                    <div className="font-semibold">Dr. Rajesh Patel</div>
+                    <div className="text-sm text-muted-foreground">Founder & CEO, MedInnovate Solutions</div>
                   </div>
                 </div>
               </CardContent>
@@ -214,21 +214,21 @@ const Startups = () => {
                     <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                   ))}
                 </div>
-                <CardTitle className="text-xl font-serif">BioCell Innovations</CardTitle>
-                <CardDescription className="text-primary font-medium">Breakthrough Discovery</CardDescription>
+                <CardTitle className="text-xl font-serif">CareConnect Technologies</CardTitle>
+                <CardDescription className="text-primary font-medium">Healthcare Impact</CardDescription>
               </CardHeader>
               <CardContent>
                 <blockquote className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  "The collaborative environment at GIMS Bioincubator accelerated our research timeline by 40%. 
-                  We achieved our first clinical trial milestone six months ahead of schedule."
+                  "Being part of GIMS Startup Clinic gave us direct access to clinical validation and patient feedback. 
+                  We've connected thousands of rural patients with specialists through our telemedicine platform."
                 </blockquote>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-bold text-primary">MJ</span>
+                    <span className="text-sm font-bold text-primary">SK</span>
                   </div>
                   <div>
-                    <div className="font-semibold">Dr. Michael Johnson</div>
-                    <div className="text-sm text-muted-foreground">CTO, BioCell Innovations</div>
+                    <div className="font-semibold">Dr. Sunita Kumar</div>
+                    <div className="text-sm text-muted-foreground">Co-Founder, CareConnect Technologies</div>
                   </div>
                 </div>
               </CardContent>
@@ -238,27 +238,27 @@ const Startups = () => {
       </section>
 
       {/* Investment Focus */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-serif font-bold mb-4">Our Investment Focus</h2>
+              <h2 className="text-4xl font-serif font-bold mb-4">Our Focus Areas</h2>
               <p className="text-xl text-muted-foreground">
-                We invest in companies that are transforming healthcare through innovative biotechnology
+                We incubate startups that are transforming healthcare through innovative medical technology
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <h3 className="text-2xl font-serif font-bold mb-4">Therapeutic Areas</h3>
+                <h3 className="text-2xl font-serif font-bold mb-4">Medical Focus Areas</h3>
                 <div className="space-y-3">
                   {[
-                    "Oncology & Immunotherapy",
-                    "Neurological Disorders",
-                    "Rare & Genetic Diseases",
-                    "Regenerative Medicine",
-                    "Infectious Diseases",
-                    "Cardiovascular Health"
+                    "Telemedicine & Remote Care",
+                    "AI-Powered Diagnostics",
+                    "Medical Devices",
+                    "Point-of-Care Testing",
+                    "Chronic Disease Management",
+                    "Rural Healthcare Solutions"
                   ].map((area, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -272,12 +272,12 @@ const Startups = () => {
                 <h3 className="text-2xl font-serif font-bold mb-4">Technology Platforms</h3>
                 <div className="space-y-3">
                   {[
-                    "Gene & Cell Therapy",
-                    "AI/ML in Drug Discovery",
-                    "Biomarker Development",
-                    "Diagnostic Technologies",
-                    "Drug Delivery Systems",
-                    "Synthetic Biology"
+                    "AI/ML in Healthcare",
+                    "IoT Medical Devices",
+                    "Blockchain for Health Data",
+                    "Wearable Health Tech",
+                    "Clinical Decision Support",
+                    "Healthcare ERP Systems"
                   ].map((platform, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -292,17 +292,17 @@ const Startups = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-serif font-bold mb-6">Ready to Join Our Portfolio?</h2>
+            <h2 className="text-4xl font-serif font-bold mb-6">Ready to Join Our Incubation Program?</h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              If you're building the next breakthrough in biotechnology, we want to hear from you. 
-              Let's discuss how we can accelerate your journey to success.
+              If you're building the next breakthrough in medical innovation, we want to hear from you. 
+              Let's discuss how we can support your journey with clinical expertise, facilities, and mentorship.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="shadow-lg hover:shadow-xl transition-all">
-                Apply for Investment
+                Apply for Incubation
               </Button>
               <Button size="lg" variant="outline" className="shadow-lg hover:shadow-xl transition-all">
                 Schedule a Meeting

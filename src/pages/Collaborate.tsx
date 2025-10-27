@@ -54,12 +54,12 @@ const Collaborate = () => {
   ];
 
   const currentPartners = [
-    { name: "MIT Biotechnology", logo: "MIT", type: "Academic" },
-    { name: "Pfizer Innovation", logo: "PF", type: "Industry" },
-    { name: "NIH Research", logo: "NIH", type: "Government" },
-    { name: "Stanford Medicine", logo: "SM", type: "Academic" },
-    { name: "Johnson & Johnson", logo: "JJ", type: "Industry" },
-    { name: "FDA Innovation", logo: "FDA", type: "Government" }
+    { name: "AIIMS Delhi", logo: "AIIMS", type: "Academic" },
+    { name: "Fortis Healthcare", logo: "FH", type: "Industry" },
+    { name: "Government of UP", logo: "UP", type: "Government" },
+    { name: "PGI Chandigarh", logo: "PGI", type: "Academic" },
+    { name: "Apollo Hospitals", logo: "AH", type: "Industry" },
+    { name: "CSIR", logo: "CSIR", type: "Government" }
   ];
 
   return (
@@ -77,15 +77,15 @@ const Collaborate = () => {
               Collaborate for Innovation
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Join forces with GIMS Bioincubator to accelerate breakthrough discoveries and 
-              bring transformative biotechnologies to market faster than ever before.
+              Join forces with GIMS Startup Clinic to accelerate medical innovation and 
+              bring transformative healthcare technologies to patients faster than ever before.
             </p>
           </div>
         </div>
       </section>
 
       {/* Partnership Types */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Partnership Opportunities</h2>
@@ -130,7 +130,7 @@ const Collaborate = () => {
       </section>
 
       {/* Current Partners */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Our Partners</h2>
@@ -156,7 +156,7 @@ const Collaborate = () => {
       </section>
 
       {/* Collaboration Process */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">How We Collaborate</h2>
@@ -212,7 +212,7 @@ const Collaborate = () => {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Collaboration Success Stories</h2>
@@ -226,25 +226,25 @@ const Collaborate = () => {
               <CardHeader>
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                    <span className="text-xl font-bold text-primary">MIT</span>
+                    <span className="text-xl font-bold text-primary">AIIMS</span>
                   </div>
                   <div>
-                    <CardTitle className="text-xl font-serif">MIT Biotechnology Partnership</CardTitle>
-                    <CardDescription className="text-primary font-medium">Research Collaboration</CardDescription>
+                    <CardTitle className="text-xl font-serif">AIIMS Delhi Collaboration</CardTitle>
+                    <CardDescription className="text-primary font-medium">Academic Partnership</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  "Our collaboration with GIMS Bioincubator has accelerated our gene therapy research by 60%. 
-                  The shared facilities and expertise have been invaluable in advancing our therapeutic candidates."
+                  "Our collaboration with GIMS Startup Clinic has enabled joint clinical research and mentorship programs. 
+                  The access to real patient data and clinical expertise has been invaluable for validating our healthcare innovations."
                 </p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="font-semibold">Dr. Sarah Chen</div>
-                    <div className="text-sm text-muted-foreground">Principal Investigator, MIT</div>
+                    <div className="font-semibold">Prof. Dr. Rajesh Verma</div>
+                    <div className="text-sm text-muted-foreground">Head of Innovation, AIIMS Delhi</div>
                   </div>
-                  <Badge variant="secondary">3 Years Partnership</Badge>
+                  <Badge variant="secondary">2 Years Partnership</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -253,25 +253,25 @@ const Collaborate = () => {
               <CardHeader>
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
-                    <span className="text-xl font-bold text-primary">PF</span>
+                    <span className="text-xl font-bold text-primary">FH</span>
                   </div>
                   <div>
-                    <CardTitle className="text-xl font-serif">Pfizer Innovation Alliance</CardTitle>
+                    <CardTitle className="text-xl font-serif">Fortis Healthcare Alliance</CardTitle>
                     <CardDescription className="text-primary font-medium">Industry Partnership</CardDescription>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  "The partnership with GIMS Bioincubator has opened new avenues for drug discovery. 
-                  Their portfolio companies have provided us with innovative therapeutic approaches."
+                  "The partnership with GIMS Startup Clinic has allowed us to pilot innovative medical devices and 
+                  digital health solutions in our network. Their incubated startups have provided cutting-edge solutions."
                 </p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="font-semibold">Dr. Robert Martinez</div>
-                    <div className="text-sm text-muted-foreground">VP of Innovation, Pfizer</div>
+                    <div className="font-semibold">Dr. Ashish Gupta</div>
+                    <div className="text-sm text-muted-foreground">Chief Innovation Officer, Fortis Healthcare</div>
                   </div>
-                  <Badge variant="secondary">2 Years Partnership</Badge>
+                  <Badge variant="secondary">1.5 Years Partnership</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -280,13 +280,13 @@ const Collaborate = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-serif font-bold mb-6">Ready to Collaborate?</h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Let's discuss how we can work together to accelerate innovation and bring 
-              breakthrough technologies to market.
+              Let's discuss how we can work together to accelerate medical innovation and bring 
+              breakthrough healthcare solutions to patients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="shadow-lg hover:shadow-xl transition-all">

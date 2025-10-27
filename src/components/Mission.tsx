@@ -4,34 +4,34 @@ import { Target, Users, Lightbulb, Heart, Stethoscope } from "lucide-react";
 const Mission = () => {
   const visionGoals = {
     icon: Target,
-    title: "Vision & Goals",
-    description: "Embark on a transformative journey with us at the 1st Public Hospital-based Medical Incubation Centre at Government Institute of Medical Sciences (GIMS). We're pioneering a groundbreaking Diseases Prevention Cohort, inviting individuals and teams from across industries and regions to join forces in combatting disease at its roots.",
+    title: "Vision & Mission",
+    description: "As India's first public hospital-based medical incubation center at GIMS, we pioneer healthcare innovation through clinical mentorship, idea validation, and startup incubation. Join us in transforming medical technology from concept to patient care.",
     goals: [
       {
         icon: Lightbulb,
         title: "Foster Innovation",
-        description: "Provide a dynamic ecosystem that supports the development and commercialization of groundbreaking medical technologies and software solutions."
+        description: "Support the development and commercialization of breakthrough medical technologies and digital health solutions."
       },
       {
         icon: Users,
         title: "Promote Collaboration",
-        description: "Cultivate interdisciplinary partnerships among clinicians, researchers, entrepreneurs, and industry leaders to synergize expertise and drive impactful healthcare innovations."
+        description: "Bridge clinicians, researchers, and entrepreneurs to drive impactful healthcare innovations."
       },
       {
         icon: Heart,
-        title: "Enhance Affordability and Accessibility",
-        description: "Focus on developing cost-effective medical solutions that address the healthcare needs of underserved populations, ensuring that advanced healthcare is within everyone's reach."
+        title: "Enhance Accessibility",
+        description: "Develop cost-effective medical solutions that address healthcare needs across all populations."
       },
       {
         icon: Stethoscope,
-        title: "Drive Education and Research",
-        description: "Advance medical education and research by integrating cutting-edge innovations into the curriculum and fostering a culture of continuous learning and discovery."
+        title: "Advance Research",
+        description: "Integrate cutting-edge innovations into medical education and foster continuous discovery."
       }
     ]
   };
 
   return (
-    <section id="about" className="relative w-full py-20 overflow-hidden bg-gradient-to-br from-background via-background/95 to-background/90">
+    <section id="about" className="relative w-full pb-16 pt-4 overflow-hidden bg-gradient-to-br from-background via-background/95 to-background/90">
       {/* Animated Background Elements - Matched with ImageCarousel */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Radial gradient overlay for consistency */}
@@ -48,39 +48,34 @@ const Mission = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/5 to-background/10 pointer-events-none"></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10 py-16">
+      <div className="container mx-auto px-6 relative z-10 pt-4 pb-12">
         <div className="max-w-6xl mx-auto">
           {/* Vision Section - Header with Enhanced Animations */}
-          <div className="text-center mb-20 animate-fade-in">
-            <div className="inline-block mb-8 animate-fade-in-down">
-              <div className="w-20 h-0.5 bg-gradient-hero mx-auto mb-4"></div>
+          <div className="text-center mb-8 animate-fade-in">
+            <div className="inline-block mb-4 animate-fade-in-down">
+              <div className="w-20 h-0.5 bg-gradient-hero mx-auto mb-2"></div>
               <span className="text-sm font-medium text-primary tracking-wider uppercase">{visionGoals.title}</span>
             </div>
             
-            {/* Icon with enhanced animation */}
-            <div className="w-28 h-28 bg-gradient-hero rounded-3xl flex items-center justify-center mb-10 shadow-2xl mx-auto animate-scale-in hover:scale-110 hover:rotate-6 transition-all duration-700">
-              <visionGoals.icon className="text-primary-foreground" size={44} />
-            </div>
-            
             {/* Title with gradient animation */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-8 tracking-tight animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4 tracking-tight animate-fade-in-up">
               Our Mission
             </h2>
             
             {/* Description with smooth fade */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
                 {visionGoals.description}
               </p>
             </div>
           </div>
 
           {/* Goals Grid - Professional Cards */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {visionGoals.goals.map((goal, index) => (
               <Card
                 key={index}
-                className="group p-10 bg-card/40 backdrop-blur-sm border border-border/30 hover:border-primary/40 hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 relative overflow-hidden animate-fade-in-up"
+                className="group p-6 bg-card/40 backdrop-blur-sm border border-border/30 hover:border-primary/40 hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 relative overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${0.3 + index * 0.15}s` }}
               >
                 {/* Enhanced Animated Background Accent */}
@@ -89,17 +84,17 @@ const Mission = () => {
                 
                 <div className="relative z-10">
                   {/* Icon with enhanced hover effect */}
-                  <div className="w-20 h-20 bg-gradient-hero rounded-2xl flex items-center justify-center mb-7 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                    <goal.icon className="text-primary-foreground" size={32} />
+                  <div className="w-14 h-14 bg-gradient-hero rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
+                    <goal.icon className="text-primary-foreground" size={24} />
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-2xl font-serif font-bold text-foreground mb-4 tracking-tight group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-lg font-serif font-bold text-foreground mb-2 tracking-tight group-hover:text-primary transition-colors duration-300">
                     {goal.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed text-base">
+                  <p className="text-muted-foreground leading-relaxed text-sm">
                     {goal.description}
                   </p>
                 </div>

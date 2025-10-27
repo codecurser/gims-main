@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 
 const Testimonial = () => {
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-16 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
@@ -15,20 +15,20 @@ const Testimonial = () => {
           <Card className="p-12 md:p-16 bg-gradient-card border-2 border-primary/20 shadow-2xl animate-fade-in hover:shadow-glow transition-all duration-500">
             <Quote className="text-primary mb-8 opacity-50" size={56} />
             <blockquote className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-relaxed mb-10 tracking-tight">
-              "GIMS Bioincubator has been instrumental in transforming our research from the lab bench 
-              to a viable commercial product. The mentorship, resources, and collaborative ecosystem 
-              here are unparalleled. They don't just provide space—they believe in your vision and 
-              work alongside you to make it reality."
+              "GIMS Startup Clinic has been instrumental in transforming our healthcare innovation from concept 
+              to clinical reality. The direct access to medical professionals, hospital infrastructure, and 
+              patient validation here is unparalleled. They don't just provide incubation—they connect you with 
+              real clinical needs and help you solve them."
             </blockquote>
             <div className="flex items-center space-x-5">
               <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-3xl font-bold text-primary-foreground">DS</span>
+                <span className="text-3xl font-bold text-primary-foreground">AK</span>
               </div>
               <div>
-                <div className="font-bold text-xl text-foreground mb-1">Dr. Sneha Patel</div>
-                <div className="text-muted-foreground font-medium">Founder & CEO, BioGenix Solutions</div>
+                <div className="font-bold text-xl text-foreground mb-1">Dr. Amit Kumar</div>
+                <div className="text-muted-foreground font-medium">Founder & CEO, MedInnovate Solutions</div>
                 <div className="text-sm text-primary font-semibold mt-2 inline-block px-3 py-1 bg-primary/10 rounded-full">
-                  Batch 2021 | Series A Funded
+                  Incubated 2023 | ₹2.5Cr Funded
                 </div>
               </div>
             </div>

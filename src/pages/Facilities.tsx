@@ -29,7 +29,7 @@ const Facilities = () => {
       </section>
 
       {/* Core Facilities */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Core Research Facilities</h2>
@@ -169,7 +169,7 @@ const Facilities = () => {
       </section>
 
       {/* Facility Features */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -229,7 +229,7 @@ const Facilities = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-serif font-bold mb-6">Ready to Access Our Facilities?</h2>

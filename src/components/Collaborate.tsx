@@ -44,7 +44,7 @@ const Collaborate = () => {
   ];
 
   return (
-    <section id="collaborate" className="py-32 bg-gradient-section relative overflow-hidden">
+    <section id="collaborate" className="py-16 bg-gradient-section relative overflow-hidden">
       {/* Medical-themed background */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl animate-pulse"></div>

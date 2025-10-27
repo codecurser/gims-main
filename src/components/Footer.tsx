@@ -19,12 +19,12 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <h3 className="font-bold text-lg">GIMS Medical Innovation Hub</h3>
-                <p className="text-xs opacity-75">Transforming Healthcare</p>
+                <h3 className="font-bold text-lg">GIMS Startup Clinic</h3>
+                <p className="text-xs opacity-75">Medical Innovation Hub</p>
               </div>
             </div>
             <p className="text-sm opacity-75 leading-relaxed">
-              Empowering healthcare startups to revolutionize patient care through cutting-edge medical technology and innovation.
+              First clinic for startups in a public hospital. Empowering medical innovation through clinical mentorship, validation, and incubation services.
             </p>
           </div>
 
@@ -92,7 +92,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm opacity-75">
-          <p>&copy; 2025 GIMS Medical Innovation Hub. All rights reserved.</p>
+          <p>&copy; 2025 GIMS Startup Clinic. All rights reserved.</p>
           <div className="flex space-x-6">
             <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
             <a href="#" className="hover:opacity-100 transition-opacity">Terms of Service</a>

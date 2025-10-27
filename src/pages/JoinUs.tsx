@@ -107,7 +107,7 @@ const JoinUs = () => {
       </section>
 
       {/* Membership Types */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Membership Options</h2>
@@ -163,7 +163,7 @@ const JoinUs = () => {
       </section>
 
       {/* Application Process */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Application Process</h2>
@@ -191,7 +191,7 @@ const JoinUs = () => {
       </section>
 
       {/* Application Form */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
@@ -307,7 +307,7 @@ const JoinUs = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-4">Why Join GIMS Bioincubator?</h2>
