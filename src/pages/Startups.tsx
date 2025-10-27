@@ -291,26 +291,34 @@ const Startups = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 bg-background">
+      {/* Startup Clinic Application Form */}
+      <section id="startup-clinic-form" className="py-12 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-serif font-bold mb-6">Ready to Join Our Incubation Program?</h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              If you're building the next breakthrough in medical innovation, we want to hear from you. 
-              Let's discuss how we can support your journey with clinical expertise, facilities, and mentorship.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="shadow-lg hover:shadow-xl transition-all">
-                Apply for Incubation
-              </Button>
-              <Button size="lg" variant="outline" className="shadow-lg hover:shadow-xl transition-all">
-                Schedule a Meeting
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
+                Join the Clinic
+              </Badge>
+              <h2 className="text-4xl font-serif font-bold mb-4">Apply to GIMS Startup Clinic</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+                Ready to revolutionize healthcare? Submit your application to join our innovative startup clinic 
+                and gain access to clinical expertise, facilities, and mentorship from experienced medical professionals.
+              </p>
+              
+              <Button 
+                size="lg" 
+                className="shadow-lg hover:shadow-xl transition-all"
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScIWoJw21Vh8tV9PgUsggHwTk4clkoJcfrmOYlM3sp0nBTReg/viewform', '_blank')}
+              >
+                Open Application Form
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      
 
       <Footer />
     </div>

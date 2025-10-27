@@ -168,16 +168,9 @@ const ImageCarousel = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                {/* Premium Badge */}
-                <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-xl px-6 py-3 rounded-full mb-8 border border-primary/30 shadow-2xl">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-sm font-bold text-primary tracking-wider uppercase">Premium Medical Innovation</span>
-                  <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" style={{ animationDelay: "0.5s" }}></div>
-                </div>
-
                 {/* Dynamic Title with Split Animation */}
-                <div className="mb-8">
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-4 leading-[0.9] tracking-tight">
+                <div className="mb-6">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-3 leading-[0.9] tracking-tight">
                     <span className="block animate-fade-in-up">{images[currentIndex].title}</span>
                     <span className="block bg-gradient-hero bg-clip-text text-transparent animate-gradient animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                       {images[currentIndex].subtitle}
@@ -186,12 +179,12 @@ const ImageCarousel = () => {
                 </div>
 
                 {/* Enhanced Description */}
-                <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-4xl animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+                <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-4xl animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
                   {images[currentIndex].description}
                 </p>
 
                 {/* Enhanced Specs with Icons */}
-                <div className="flex flex-wrap gap-4 mb-10">
+                <div className="flex flex-wrap gap-4 mb-6">
                   {images[currentIndex].specs?.map((spec, index) => (
                     <div
                       key={index}
@@ -204,7 +197,7 @@ const ImageCarousel = () => {
                 </div>
 
                 {/* Dynamic Stats Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-10 max-w-2xl">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 max-w-2xl">
                   {images[currentIndex].stats?.map((stat, index) => (
                     <div
                       key={index}
@@ -221,7 +214,7 @@ const ImageCarousel = () => {
                 </div>
 
                 {/* Enhanced CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: "1s" }}>
+                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "1s" }}>
                   <Button size="lg" className="group shadow-2xl hover:shadow-3xl transition-all duration-500 text-base px-8 py-4 bg-gradient-hero hover:scale-105 border border-primary/20 hover:border-primary/40">
                     Discover Innovation
                     <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
