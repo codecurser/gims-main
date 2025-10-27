@@ -30,7 +30,7 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out ${
       isVisible ? "translate-y-0" : "-translate-y-full"
     } ${
       scrolled ? "bg-card/98 backdrop-blur-xl shadow-xl py-3" : "bg-card/90 backdrop-blur-lg py-4"

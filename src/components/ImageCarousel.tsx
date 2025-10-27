@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Play, Pause, Star, Award, Zap, Heart } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Award, Zap, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface CarouselImage {
@@ -107,12 +107,8 @@ const ImageCarousel = () => {
     setCurrentIndex(index);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-gradient-to-br from-background via-background/95 to-background/90 pt-20">
+    <section className="relative w-full h-screen overflow-hidden bg-gradient-to-br from-background via-background/95 to-background/90 pt-28">
       {/* Animated Background Elements - Matched with Mission Section */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Radial gradient overlay for consistency */}
@@ -168,7 +164,7 @@ const ImageCarousel = () => {
         </div>
 
         {/* Enhanced Content Overlay */}
-        <div className="absolute inset-0 flex items-center">
+        <div className="absolute inset-0 flex items-center z-0">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -181,7 +177,7 @@ const ImageCarousel = () => {
 
                 {/* Dynamic Title with Split Animation */}
                 <div className="mb-8">
-                  <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold text-foreground mb-4 leading-[0.85] tracking-tight">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground mb-4 leading-[0.9] tracking-tight">
                     <span className="block animate-fade-in-up">{images[currentIndex].title}</span>
                     <span className="block bg-gradient-hero bg-clip-text text-transparent animate-gradient animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                       {images[currentIndex].subtitle}
@@ -190,7 +186,7 @@ const ImageCarousel = () => {
                 </div>
 
                 {/* Enhanced Description */}
-                <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-4xl animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+                <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-4xl animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
                   {images[currentIndex].description}
                 </p>
 
@@ -208,29 +204,29 @@ const ImageCarousel = () => {
                 </div>
 
                 {/* Dynamic Stats Grid */}
-                <div className="grid grid-cols-3 gap-6 mb-10 max-w-2xl">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-10 max-w-2xl">
                   {images[currentIndex].stats?.map((stat, index) => (
                     <div
                       key={index}
-                      className="group bg-card/60 backdrop-blur-xl p-6 rounded-2xl border border-border/40 hover:border-primary/40 transition-all duration-500 animate-scale-in hover:scale-105 hover:shadow-xl"
+                      className="group bg-card/60 backdrop-blur-xl p-4 rounded-2xl border border-border/40 hover:border-primary/40 transition-all duration-500 animate-scale-in hover:scale-105 hover:shadow-xl"
                       style={{ animationDelay: `${0.8 + index * 0.1}s` }}
                     >
-                      <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                        <stat.icon className="text-primary-foreground" size={24} />
+                      <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                        <stat.icon className="text-primary-foreground" size={20} />
                       </div>
-                      <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
-                      <div className="text-sm font-medium text-muted-foreground">{stat.label}</div>
+                      <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
+                      <div className="text-xs font-medium text-muted-foreground">{stat.label}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* Enhanced CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-6 mb-8 animate-fade-in-up" style={{ animationDelay: "1s" }}>
-                  <Button size="lg" className="group shadow-2xl hover:shadow-3xl transition-all duration-500 text-lg px-10 py-5 bg-gradient-hero hover:scale-105 border border-primary/20 hover:border-primary/40">
+                <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: "1s" }}>
+                  <Button size="lg" className="group shadow-2xl hover:shadow-3xl transition-all duration-500 text-base px-8 py-4 bg-gradient-hero hover:scale-105 border border-primary/20 hover:border-primary/40">
                     Discover Innovation
-                    <ChevronRight className="ml-3 group-hover:translate-x-1 transition-transform duration-300" size={20} />
+                    <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
                   </Button>
-                  <Button size="lg" variant="outline" className="text-lg px-10 py-5 border-2 hover:bg-muted/30 hover:scale-105 transition-all duration-500 backdrop-blur-sm hover:border-primary/40">
+                  <Button size="lg" variant="outline" className="text-base px-8 py-4 border-2 hover:bg-muted/30 hover:scale-105 transition-all duration-500 backdrop-blur-sm hover:border-primary/40">
                     Join Our Mission
                   </Button>
                 </div>
@@ -248,14 +244,6 @@ const ImageCarousel = () => {
             className="w-10 h-10 bg-card/90 backdrop-blur-xl border-border/50 hover:border-primary/60 hover:bg-card/95 transition-all duration-300 ease-out shadow-lg hover:scale-105"
           >
             <ChevronLeft size={18} />
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={togglePlayPause}
-            className="w-10 h-10 bg-card/90 backdrop-blur-xl border-border/50 hover:border-primary/60 hover:bg-card/95 transition-all duration-300 ease-out shadow-lg hover:scale-105"
-          >
-            {isPlaying ? <Pause size={18} /> : <Play size={18} />}
           </Button>
         </div>
 

@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Heart, Users, Lightbulb, Shield, Stethoscope, Activity } from "lucide-react";
+import { Heart, Shield, Stethoscope, Activity, Target, Users, Lightbulb } from "lucide-react";
 
 const Mission = () => {
   const values = [
@@ -14,19 +14,9 @@ const Mission = () => {
       description: "We partner with medical professionals and researchers to ensure our startups develop solutions that meet the highest clinical standards and regulatory requirements."
     },
     {
-      icon: Users,
-      title: "Healthcare Community",
-      description: "Building bridges between hospitals, medical professionals, researchers, and entrepreneurs to create a collaborative ecosystem that accelerates medical innovation."
-    },
-    {
       icon: Shield,
       title: "Medical Safety First",
       description: "Patient safety is paramount. We ensure all medical technologies undergo rigorous testing and validation before reaching healthcare providers and patients."
-    },
-    {
-      icon: Lightbulb,
-      title: "Breakthrough Research",
-      description: "Supporting groundbreaking medical research that addresses critical healthcare challenges, from chronic diseases to emergency care innovations."
     },
     {
       icon: Activity,
@@ -34,6 +24,34 @@ const Mission = () => {
       description: "Measuring success not just by business metrics, but by the positive impact on healthcare delivery, patient care, and medical outcomes."
     }
   ];
+
+  const visionGoals = {
+    icon: Target,
+    title: "Vision & Goals",
+    description: "Embark on a transformative journey with us at the 1st Public Hospital-based Medical Incubation Centre at Government Institute of Medical Sciences (GIMS). We're pioneering a groundbreaking Diseases Prevention Cohort, inviting individuals and teams from across industries and regions to join forces in combatting disease at its roots.",
+    goals: [
+      {
+        icon: Lightbulb,
+        title: "Foster Innovation",
+        description: "Provide a dynamic ecosystem that supports the development and commercialization of groundbreaking medical technologies and software solutions."
+      },
+      {
+        icon: Users,
+        title: "Promote Collaboration",
+        description: "Cultivate interdisciplinary partnerships among clinicians, researchers, entrepreneurs, and industry leaders to synergize expertise and drive impactful healthcare innovations."
+      },
+      {
+        icon: Heart,
+        title: "Enhance Affordability and Accessibility",
+        description: "Focus on developing cost-effective medical solutions that address the healthcare needs of underserved populations, ensuring that advanced healthcare is within everyone's reach."
+      },
+      {
+        icon: Stethoscope,
+        title: "Drive Education and Research",
+        description: "Advance medical education and research by integrating cutting-edge innovations into the curriculum and fostering a culture of continuous learning and discovery."
+      }
+    ]
+  };
 
   return (
     <section id="about" className="py-32 bg-gradient-section relative overflow-hidden">
@@ -59,7 +77,8 @@ const Mission = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* Core Values - 2x2 Grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
           {values.map((value, index) => (
             <Card 
               key={index}
@@ -78,6 +97,42 @@ const Mission = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Vision & Goals - Full Width Card */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <Card className="group p-12 bg-gradient-card border border-primary/30 hover:border-primary/40 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 animate-fade-in-up relative overflow-hidden"
+            style={{ animationDelay: "0.2s" }}
+          >
+            {/* Enhanced Background Accent */}
+            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-hero opacity-10 rounded-full -translate-y-20 translate-x-20 group-hover:scale-150 transition-transform duration-700"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-full translate-y-16 -translate-x-16 group-hover:scale-125 transition-transform duration-700"></div>
+            
+            <div className="relative z-10">
+              <div className="text-center mb-10">
+                <div className="w-24 h-24 bg-gradient-hero rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-xl mx-auto">
+                  <visionGoals.icon className="text-primary-foreground" size={40} />
+                </div>
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6 tracking-tight text-center">{visionGoals.title}</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">{visionGoals.description}</p>
+              </div>
+
+              {/* Goals Grid */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {visionGoals.goals.map((goal, index) => (
+                  <div key={index} className="flex items-start space-x-4 p-6 bg-card/50 rounded-2xl border border-border/30 hover:border-primary/20 transition-all duration-300 hover:shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <goal.icon className="text-primary-foreground" size={20} />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-serif font-bold text-foreground mb-2">{goal.title}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{goal.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>

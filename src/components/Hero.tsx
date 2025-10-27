@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
 
       {/* Medical Professional Content */}
-      <div className="container mx-auto px-6 relative z-10 pt-24">
+      <div className="container mx-auto px-6 relative z-10 pt-28">
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
           {/* Medical Innovation Badge */}
           <div className="inline-flex items-center space-x-3 bg-primary/10 backdrop-blur-lg px-6 py-3 rounded-full mb-16 border border-primary/20 shadow-lg">
