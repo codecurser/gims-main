@@ -2,6 +2,12 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star, Award, Zap, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Import images
+import heroLab from "@/assets/hero-lab.jpg";
+import facilityLab from "@/assets/facility-lab.jpg";
+import collaboration from "@/assets/collaboration.jpg";
+import innovationBg from "@/assets/innovation-bg.jpg";
+
 interface CarouselImage {
   id: number;
   src: string;
@@ -23,7 +29,7 @@ const ImageCarousel = () => {
   const images: CarouselImage[] = [
     {
       id: 1,
-      src: "/src/assets/hero-lab.jpg",
+      src: heroLab,
       alt: "Advanced Medical Laboratory",
       title: "Revolutionary",
       subtitle: "Medical Innovation",
@@ -37,7 +43,7 @@ const ImageCarousel = () => {
     },
     {
       id: 2,
-      src: "/src/assets/facility-lab.jpg",
+      src: facilityLab,
       alt: "Medical Research Center",
       title: "Next-Gen",
       subtitle: "Research Facilities",
@@ -51,7 +57,7 @@ const ImageCarousel = () => {
     },
     {
       id: 3,
-      src: "/src/assets/collaboration.jpg",
+      src: collaboration,
       alt: "Medical Collaboration",
       title: "Global",
       subtitle: "Healthcare Network",
@@ -65,7 +71,7 @@ const ImageCarousel = () => {
     },
     {
       id: 4,
-      src: "/src/assets/innovation-bg.jpg",
+      src: innovationBg,
       alt: "Medical Innovation",
       title: "Future",
       subtitle: "of Healthcare",
