@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Stethoscope, Brain, Shield, Activity, TrendingUp } from "lucide-react";
 import startupEcosystemBanner from "@/assets/startup-ecosystem-banner.jpg";
+import proudMomentBanner from "@/assets/proud-moment-banner.png";
 
 const Startups = () => {
   const startups = [
@@ -98,6 +99,15 @@ const Startups = () => {
             Startups nurtured at GIMS CMI are shaping India's future. From MATRI's Shark Tank showcase to 
             breakthrough innovations in affordable healthcare - success is measured in lives touched and challenges overcome.
           </p>
+        </div>
+
+        {/* Proud Moment Banner */}
+        <div className="rounded-3xl overflow-hidden shadow-2xl mb-12 animate-fade-in border border-border/40 max-w-6xl mx-auto">
+          <img 
+            src={proudMomentBanner} 
+            alt="GIMS CMI Proud Moment - Startup Success" 
+            className="w-full h-auto object-cover"
+          />
         </div>
 
         {/* Enhanced Stats Grid */}

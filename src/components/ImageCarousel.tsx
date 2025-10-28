@@ -113,11 +113,11 @@ const ImageCarousel = () => {
   };
 
   return (
-    <section className="relative w-full h-[700px] overflow-visible bg-gray-100 pt-20 pb-6">
+    <section className="relative w-full h-[680px] overflow-visible bg-gray-100 pt-20 pb-4">
       {/* Carousel Container */}
-      <div className="relative w-full h-full px-6 md:px-10">
+      <div className="relative w-full h-full px-4 md:px-8">
         {/* Slides */}
-        <div className="relative w-full h-full py-2">
+        <div className="relative w-full h-full">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -177,25 +177,25 @@ const ImageCarousel = () => {
         <div className="absolute bottom-0 left-0 right-0 z-30">
           {/* Curved Background */}
           <div className="relative h-72">
-            {/* SVG Curve - Deeper Concave Upward Parabolic */}
+            {/* SVG Curve - Gentler Concave Upward Parabolic */}
             <svg
-              className="absolute top-0 w-full h-28"
-              viewBox="0 0 1440 112"
+              className="absolute top-0 w-full h-24"
+              viewBox="0 0 1440 96"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
             >
               <path
-                d="M0,112 Q720,0 1440,112 L1440,112 L0,112 Z"
+                d="M0,96 Q720,20 1440,96 L1440,96 L0,96 Z"
                 fill="white"
               />
             </svg>
             
             {/* White Background for Text */}
-            <div className="absolute top-28 left-0 right-0 bottom-0 bg-white"></div>
+            <div className="absolute top-24 left-0 right-0 bottom-0 bg-white"></div>
             
             {/* Text Content - Compact */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center pt-16">
+            <div className="absolute inset-0 flex flex-col items-center justify-center pt-12">
               <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-3 h-12 flex items-center">
                 {typewriterText}
                 <span className="typewriter-cursor">|</span>

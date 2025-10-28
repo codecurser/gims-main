@@ -1,9 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Microscope, Stethoscope, Heart, Brain, Shield, Activity, Building2 } from "lucide-react";
-import facilityImage from "@/assets/facility-lab.jpg";
-import collaborationImage from "@/assets/collaboration.jpg";
-import innovationImage from "@/assets/innovation-bg.jpg";
 
 const Facilities = () => {
   const facilities = [
@@ -11,43 +8,37 @@ const Facilities = () => {
       icon: Building2,
       title: "15,000 sq. ft. Incubator Space",
       description: "State-of-the-art incubation center with prototyping labs, clinical trial units, and modern co-working spaces for healthcare startups.",
-      badge: "Infrastructure",
-      image: facilityImage
+      badge: "Infrastructure"
     },
     {
       icon: Stethoscope,
       title: "630-Bed NABH Hospital Access",
       description: "Clinical access to a fully functional NABH-accredited hospital providing real-world validation opportunities for healthcare innovations.",
-      badge: "Clinical Access",
-      image: collaborationImage
+      badge: "Clinical Access"
     },
     {
       icon: Heart,
       title: "Startup Clinics",
       description: "Direct doctor-entrepreneur collaboration through dedicated startup clinics enabling idea validation and clinical mentorship.",
-      badge: "Mentorship",
-      image: innovationImage
+      badge: "Mentorship"
     },
     {
       icon: Microscope,
       title: "Clinical Trial Units",
       description: "Dedicated facilities for conducting clinical trials with regulatory support and expert guidance for healthcare innovations.",
-      badge: "Research",
-      image: facilityImage
+      badge: "Research"
     },
     {
       icon: Shield,
       title: "Strategic Partnerships",
       description: "Collaborations with Stanford Biodesign, BIRAC, IITs, and leading hospitals to support startup growth and validation.",
-      badge: "Partnerships",
-      image: collaborationImage
+      badge: "Partnerships"
     },
     {
       icon: Activity,
       title: "Zero-Cost Incubation Support",
       description: "Comprehensive incubation support for early-stage healthcare ventures at zero cost, including mentorship and infrastructure.",
-      badge: "Support",
-      image: innovationImage
+      badge: "Support"
     }
   ];
 
@@ -80,31 +71,21 @@ const Facilities = () => {
           {facilities.map((facility, index) => (
             <Card 
               key={index}
-              className="group p-0 bg-gradient-card border border-border/40 hover:border-primary/25 hover:shadow-2xl transition-all duration-700 animate-fade-in-up overflow-hidden"
+              className="group p-8 bg-gradient-card border border-border/40 hover:border-primary/25 hover:shadow-2xl transition-all duration-700 animate-fade-in-up hover:-translate-y-2"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Enhanced Image with Overlay */}
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={facility.image} 
-                  alt={facility.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute top-4 right-4">
-                  <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30 font-semibold text-sm px-3 py-1">
-                    {facility.badge}
-                  </Badge>
+              {/* Icon and Badge Header */}
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-xl">
+                  <facility.icon className="text-primary-foreground" size={28} />
                 </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="w-12 h-12 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-xl">
-                    <facility.icon className="text-primary-foreground" size={24} />
-                  </div>
-                </div>
+                <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30 font-semibold text-sm px-3 py-1">
+                  {facility.badge}
+                </Badge>
               </div>
               
               {/* Content */}
-              <div className="p-8">
+              <div>
                 <h3 className="text-2xl font-serif font-bold text-foreground mb-4 tracking-tight">{facility.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{facility.description}</p>
               </div>
