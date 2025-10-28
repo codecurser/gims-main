@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollProgress from "@/components/ScrollProgress";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Facilities from "./pages/Facilities";
 import Startups from "./pages/Startups";
 import Collaborate from "./pages/Collaborate";
 import JoinUs from "./pages/JoinUs";
@@ -24,7 +23,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          <Route path="/facilities" element={<Facilities />} />
           <Route path="/startups" element={<Startups />} />
           <Route path="/collaborate" element={<Collaborate />} />
           <Route path="/join-us" element={<JoinUs />} />

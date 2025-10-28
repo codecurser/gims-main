@@ -71,24 +71,39 @@ const Facilities = () => {
           {facilities.map((facility, index) => (
             <Card 
               key={index}
-              className="group p-8 bg-gradient-card border border-border/40 hover:border-primary/25 hover:shadow-2xl transition-all duration-700 animate-fade-in-up hover:-translate-y-2"
+              className="group relative p-6 bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/60 hover:shadow-xl transition-all duration-500 animate-fade-in-up hover:-translate-y-2 overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Icon and Badge Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-xl">
-                  <facility.icon className="text-primary-foreground" size={28} />
+              {/* Subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Top section with icon and badge */}
+              <div className="relative flex items-start justify-between mb-5">
+                {/* Icon */}
+                <div className="relative">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <facility.icon className="text-white" size={28} strokeWidth={2.5} />
+                  </div>
                 </div>
-                <Badge variant="secondary" className="bg-primary/20 text-primary border-primary/30 font-semibold text-sm px-3 py-1">
+                
+                {/* Badge */}
+                <Badge className="bg-primary/10 text-primary border-primary/30 text-xs px-3 py-1 font-semibold">
                   {facility.badge}
                 </Badge>
               </div>
               
               {/* Content */}
-              <div>
-                <h3 className="text-2xl font-serif font-bold text-foreground mb-4 tracking-tight">{facility.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{facility.description}</p>
+              <div className="relative space-y-3">
+                <h3 className="text-xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
+                  {facility.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                  {facility.description}
+                </p>
               </div>
+              
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
             </Card>
           ))}
         </div>

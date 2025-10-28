@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoImage from "@/assets/logo.png";
 
 const Navbar = () => {
@@ -9,6 +9,53 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToFacilities = () => {
+    const smoothScrollTo = (element: HTMLElement) => {
+      const targetPosition = element.offsetTop - 80;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 1500; // 1.5 seconds for slower scroll
+      let start: number | null = null;
+
+      const animation = (currentTime: number) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        // Easing function for smooth deceleration
+        const easeInOutCubic = progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        
+        window.scrollTo(0, startPosition + distance * easeInOutCubic);
+        
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      };
+      
+      requestAnimationFrame(animation);
+    };
+
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const facilitiesSection = document.getElementById('facilities');
+        if (facilitiesSection) {
+          smoothScrollTo(facilitiesSection);
+        }
+      }, 100);
+    } else {
+      const facilitiesSection = document.getElementById('facilities');
+      if (facilitiesSection) {
+        smoothScrollTo(facilitiesSection);
+      }
+    }
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,10 +108,10 @@ const Navbar = () => {
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
             </Link>
-            <Link to="/facilities" className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group">
+            <button onClick={scrollToFacilities} className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group">
               Facilities
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-            </Link>
+            </button>
             <Link to="/startups" className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group">
               Startups
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
@@ -92,7 +139,7 @@ const Navbar = () => {
           <div className="md:hidden mt-4 space-y-4 pb-4 animate-fade-in">
             <Link to="/" className="block text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
             <Link to="/about" className="block text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>About</Link>
-            <Link to="/facilities" className="block text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Facilities</Link>
+            <button onClick={scrollToFacilities} className="block text-left text-foreground hover:text-primary transition-colors">Facilities</button>
             <Link to="/startups" className="block text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Startups</Link>
             <Link to="/collaborate" className="block text-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Collaborate</Link>
             <Link to="/join-us" onClick={() => setIsOpen(false)}>
