@@ -1,6 +1,38 @@
-import collaborationImage from "@/assets/collaboration.jpg";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import carouselImg1 from "@/assets/carousel-img-1.jpg";
+import carouselImg2 from "@/assets/carousel-img-2.jpg";
+import carouselImg3 from "@/assets/carousel-img-3.jpg";
+import carouselImg4 from "@/assets/carousel-img-4.jpg";
+import startupEcosystemBanner from "@/assets/startup-ecosystem-banner.jpg";
+import proudMomentBanner from "@/assets/proud-moment-banner.png";
 
 const Collaborate = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const images = [
+    { src: carouselImg1, alt: "GIMS CMI Facility 1" },
+    { src: carouselImg2, alt: "GIMS CMI Facility 2" },
+    { src: carouselImg3, alt: "GIMS CMI Facility 3" },
+    { src: carouselImg4, alt: "GIMS CMI Facility 4" },
+    { src: startupEcosystemBanner, alt: "GIMS CMI Startup Ecosystem" },
+    { src: proudMomentBanner, alt: "GIMS CMI Proud Moment" }
+  ];
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+  
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+  
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
   return (
     <section id="collaborate" className="py-16 bg-gradient-section relative overflow-hidden">
@@ -30,13 +62,58 @@ const Collaborate = () => {
               with clinical excellence, strategic support, and world-class infrastructure.
             </p>
           </div>
-          <div className="rounded-3xl overflow-hidden shadow-2xl animate-scale-in border border-border/50 group">
-            <img 
-              src={collaborationImage} 
-              alt="Medical professionals collaborating on healthcare innovation" 
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl animate-scale-in border border-border/50 h-[500px] group">
+            {/* Carousel Images */}
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-contain bg-gray-100"
+                />
+              </div>
+            ))}
+            
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
+            
+            {/* Navigation Arrows */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-800" />
+            </button>
+            
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-800" />
+            </button>
+            
+            {/* Slide Indicators */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex gap-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`transition-all duration-300 rounded-full ${
+                    index === currentIndex
+                      ? "bg-white w-8 h-2"
+                      : "bg-white/60 hover:bg-white/80 w-2 h-2"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
