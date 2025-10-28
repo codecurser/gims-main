@@ -19,12 +19,12 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <h3 className="font-bold text-lg">GIMS Startup Clinic</h3>
-                <p className="text-xs opacity-75">Medical Innovation Hub</p>
+                <h3 className="font-bold text-lg">GIMS CMI</h3>
+                <p className="text-xs opacity-75">Centre for Medical Innovation</p>
               </div>
             </div>
             <p className="text-sm opacity-75 leading-relaxed">
-              First clinic for startups in a public hospital. Empowering medical innovation through clinical mentorship, validation, and incubation services.
+              India's first public hospital-based medical incubator. Empowering healthcare innovation through clinical access, mentorship, and world-class facilities.
             </p>
           </div>
 
@@ -45,18 +45,18 @@ const Footer = () => {
             <ul className="space-y-3 text-sm opacity-75">
               <li className="flex items-start space-x-2">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>GIMS Campus, Greater Noida, UP 201310</span>
+                <span>GIMS, Greater Noida, Uttar Pradesh</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={16} />
-                <a href="mailto:info@gims-bioincubator.ac.in" className="hover:opacity-100 transition-opacity">
-                  info@gims-bioincubator.ac.in
+                <a href="mailto:gims.incubator@bio.com" className="hover:opacity-100 transition-opacity">
+                  gims.incubator@bio.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone size={16} />
-                <a href="tel:+911234567890" className="hover:opacity-100 transition-opacity">
-                  +91 (123) 456-7890
+                <a href="tel:+919876543210" className="hover:opacity-100 transition-opacity">
+                  +91-9876543210
                 </a>
               </li>
             </ul>
@@ -92,7 +92,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm opacity-75">
-          <p>&copy; 2025 GIMS Startup Clinic. All rights reserved.</p>
+          <p>&copy; 2025 GIMS CMI. All rights reserved.</p>
           <div className="flex space-x-6">
             <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
             <a href="#" className="hover:opacity-100 transition-opacity">Terms of Service</a>

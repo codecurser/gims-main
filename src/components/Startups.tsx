@@ -1,70 +1,71 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Stethoscope, Brain, Shield, Activity, TrendingUp } from "lucide-react";
+import startupEcosystemBanner from "@/assets/startup-ecosystem-banner.jpg";
 
 const Startups = () => {
   const startups = [
     {
-      name: "MediScan AI",
-      sector: "Diagnostics",
-      achievement: "AI-powered medical imaging for early cancer detection",
-      funding: "Series A",
+      name: "MATRI",
+      sector: "Women's Health",
+      achievement: "Wearable menstrual pain relief technology - Featured on Shark Tank India",
+      funding: "Incubated 2024",
       color: "bg-primary/10 text-primary",
-      icon: Brain,
-      patients: "10K+"
-    },
-    {
-      name: "CardioCare Technologies",
-      sector: "Cardiology",
-      achievement: "Wearable heart monitoring with predictive analytics",
-      funding: "Series B",
-      color: "bg-secondary/10 text-secondary",
       icon: Heart,
-      patients: "25K+"
-    },
-    {
-      name: "NeuroLink Solutions",
-      sector: "Neurology",
-      achievement: "Brain-computer interface for paralysis patients",
-      funding: "Seed",
-      color: "bg-accent/10 text-accent",
-      icon: Brain,
-      patients: "500+"
-    },
-    {
-      name: "Surgical Precision Inc",
-      sector: "Surgery",
-      achievement: "Robotic surgical assistance systems",
-      funding: "Series A",
-      color: "bg-primary/10 text-primary",
-      icon: Shield,
       patients: "5K+"
     },
     {
-      name: "TeleHealth Connect",
-      sector: "Telemedicine",
-      achievement: "Remote patient monitoring platform",
-      funding: "Angel",
+      name: "HealthTech Innovation",
+      sector: "Medical Devices",
+      achievement: "Affordable diagnostic devices for rural healthcare",
+      funding: "Seed Stage",
       color: "bg-secondary/10 text-secondary",
-      icon: Activity,
-      patients: "50K+"
+      icon: Stethoscope,
+      patients: "10K+"
     },
     {
-      name: "PharmaGen Innovations",
+      name: "AI Diagnostics Pro",
+      sector: "AI Healthcare",
+      achievement: "AI-powered disease detection and prediction platform",
+      funding: "Early Stage",
+      color: "bg-accent/10 text-accent",
+      icon: Brain,
+      patients: "3K+"
+    },
+    {
+      name: "MedTech Solutions",
+      sector: "Surgery Tech",
+      achievement: "Innovative surgical instruments for minimally invasive procedures",
+      funding: "Pre-Seed",
+      color: "bg-primary/10 text-primary",
+      icon: Shield,
+      patients: "2K+"
+    },
+    {
+      name: "TeleCare India",
+      sector: "Telemedicine",
+      achievement: "Connecting rural patients with specialist doctors remotely",
+      funding: "Seed Stage",
+      color: "bg-secondary/10 text-secondary",
+      icon: Activity,
+      patients: "15K+"
+    },
+    {
+      name: "BioPharma Innovate",
       sector: "Pharmaceuticals",
-      achievement: "Personalized medicine for rare diseases",
-      funding: "Series B",
+      achievement: "Developing affordable biosimilars for chronic diseases",
+      funding: "Early Stage",
       color: "bg-accent/10 text-accent",
       icon: Stethoscope,
-      patients: "2K+"
+      patients: "1K+"
     }
   ];
 
   const stats = [
-    { icon: Heart, value: "75+", label: "Medical Startups" },
-    { icon: TrendingUp, value: "92%", label: "Success Rate" },
-    { icon: Shield, value: "25+", label: "FDA Approvals" },
-    { icon: Activity, value: "500K+", label: "Patients Served" }
+    { icon: Heart, value: "10+", label: "Startups Incubated" },
+    { icon: TrendingUp, value: "100+", label: "Startup Clinics Conducted" },
+    { icon: Shield, value: "630+", label: "Bed Hospital Access" },
+    { icon: Activity, value: "15,000+", label: "sq ft Incubation Space" }
   ];
 
   return (
@@ -76,17 +77,26 @@ const Startups = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
+        {/* Startup Ecosystem Banner */}
+        <div className="rounded-3xl overflow-hidden shadow-2xl mb-12 animate-fade-in border border-border/40 max-w-7xl mx-auto">
+          <img 
+            src={startupEcosystemBanner} 
+            alt="GIMS CMI Startup Ecosystem" 
+            className="w-full h-[400px] md:h-[500px] object-cover"
+          />
+        </div>
+
         <div className="text-center max-w-5xl mx-auto mb-12 animate-fade-in">
           <div className="inline-block mb-4">
             <div className="w-20 h-0.5 bg-gradient-hero mx-auto mb-2"></div>
-            <span className="text-sm font-medium text-primary tracking-wider uppercase">Healthcare Innovation</span>
+            <span className="text-sm font-medium text-primary tracking-wider uppercase">Startup Success Stories</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 tracking-tight text-center">
-            Our Medical Innovation Portfolio
+            Our Proud Moment
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
-            Meet the pioneering healthcare companies we're proud to support. Each one is transforming 
-            patient care through innovative medical technology and breakthrough treatments.
+            Startups nurtured at GIMS CMI are shaping India's future. From MATRI's Shark Tank showcase to 
+            breakthrough innovations in affordable healthcare - success is measured in lives touched and challenges overcome.
           </p>
         </div>
 

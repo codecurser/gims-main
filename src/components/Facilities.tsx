@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Microscope, Stethoscope, Heart, Brain, Shield, Activity } from "lucide-react";
+import { Microscope, Stethoscope, Heart, Brain, Shield, Activity, Building2 } from "lucide-react";
 import facilityImage from "@/assets/facility-lab.jpg";
 import collaborationImage from "@/assets/collaboration.jpg";
 import innovationImage from "@/assets/innovation-bg.jpg";
@@ -8,45 +8,45 @@ import innovationImage from "@/assets/innovation-bg.jpg";
 const Facilities = () => {
   const facilities = [
     {
-      icon: Microscope,
-      title: "Advanced Medical Research Labs",
-      description: "State-of-the-art pathology, microbiology, and clinical research laboratories with cutting-edge diagnostic equipment and sterile environments.",
-      badge: "Research Core",
+      icon: Building2,
+      title: "15,000 sq. ft. Incubator Space",
+      description: "State-of-the-art incubation center with prototyping labs, clinical trial units, and modern co-working spaces for healthcare startups.",
+      badge: "Infrastructure",
       image: facilityImage
     },
     {
       icon: Stethoscope,
-      title: "Clinical Testing Facilities",
-      description: "Comprehensive clinical trial infrastructure with patient monitoring systems, data collection tools, and regulatory compliance support.",
-      badge: "Clinical Trials",
+      title: "630-Bed NABH Hospital Access",
+      description: "Clinical access to a fully functional NABH-accredited hospital providing real-world validation opportunities for healthcare innovations.",
+      badge: "Clinical Access",
       image: collaborationImage
     },
     {
       icon: Heart,
-      title: "Cardiology Innovation Center",
-      description: "Specialized cardiac care technology development lab with advanced imaging systems, monitoring devices, and treatment protocols.",
-      badge: "Cardiology",
+      title: "Startup Clinics",
+      description: "Direct doctor-entrepreneur collaboration through dedicated startup clinics enabling idea validation and clinical mentorship.",
+      badge: "Mentorship",
       image: innovationImage
     },
     {
-      icon: Brain,
-      title: "Neurology & AI Lab",
-      description: "AI-powered diagnostic tools, brain imaging technology, and neurological treatment innovation center with machine learning capabilities.",
-      badge: "AI Medicine",
+      icon: Microscope,
+      title: "Clinical Trial Units",
+      description: "Dedicated facilities for conducting clinical trials with regulatory support and expert guidance for healthcare innovations.",
+      badge: "Research",
       image: facilityImage
     },
     {
       icon: Shield,
-      title: "Medical Device Testing",
-      description: "FDA-compliant testing facilities for medical devices, surgical instruments, and patient safety equipment validation.",
-      badge: "Device Testing",
+      title: "Strategic Partnerships",
+      description: "Collaborations with Stanford Biodesign, BIRAC, IITs, and leading hospitals to support startup growth and validation.",
+      badge: "Partnerships",
       image: collaborationImage
     },
     {
       icon: Activity,
-      title: "Telemedicine Innovation Hub",
-      description: "Remote patient monitoring systems, virtual consultation platforms, and digital health solution development center.",
-      badge: "Digital Health",
+      title: "Zero-Cost Incubation Support",
+      description: "Comprehensive incubation support for early-stage healthcare ventures at zero cost, including mentorship and infrastructure.",
+      badge: "Support",
       image: innovationImage
     }
   ];
@@ -67,11 +67,11 @@ const Facilities = () => {
             <span className="text-sm font-medium text-primary tracking-wider uppercase">Medical Infrastructure</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-6 tracking-tight text-center">
-            World-Class Medical Facilities
+            Our Facilities & Support
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
-            Access cutting-edge medical facilities designed to support every stage of healthcare innovation, 
-            from research and development to clinical trials and commercialization.
+            GIMS CMI provides comprehensive infrastructure and strategic support to nurture healthcare startups 
+            from ideation to commercialization with clinical access and world-class facilities.
           </p>
         </div>
 
@@ -110,30 +110,6 @@ const Facilities = () => {
               </div>
             </Card>
           ))}
-        </div>
-
-        {/* Featured Medical Technology Showcase */}
-        <div className="rounded-3xl overflow-hidden shadow-2xl animate-scale-in border border-border/40 max-w-6xl mx-auto relative group">
-          <img 
-            src={facilityImage} 
-            alt="State-of-the-art medical technology laboratory facility" 
-            className="w-full h-[600px] md:h-[700px] object-cover group-hover:scale-105 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
-          <div className="absolute bottom-8 left-8 right-8">
-            <div className="bg-card/90 backdrop-blur-lg p-8 rounded-2xl border border-border/40">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Advanced Medical Research Center</h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Our flagship facility houses the latest in medical technology, from AI-powered diagnostic tools 
-                to precision medicine research labs, all designed to accelerate healthcare innovation.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-2">FDA Approved</Badge>
-                <Badge className="bg-secondary/10 text-secondary border-secondary/20 px-4 py-2">ISO Certified</Badge>
-                <Badge className="bg-accent/10 text-accent border-accent/20 px-4 py-2">24/7 Support</Badge>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

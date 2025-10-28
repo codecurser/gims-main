@@ -63,12 +63,12 @@ const Collaborate = () => {
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
               Whether you're a medical entrepreneur, healthcare professional, hospital administrator, researcher, 
-              or investor, GIMS Medical Innovation Hub offers unique opportunities to collaborate and create 
-              meaningful impact in healthcare.
+              or investor, GIMS CMI offers unique opportunities to collaborate and create meaningful impact in 
+              healthcare through our 630-bed hospital ecosystem.
             </p>
             <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-              Our doors are open to those who share our passion for medical innovation and commitment to 
-              advancing patient care through cutting-edge technology.
+              Join India's first public hospital-based medical incubator and be part of transforming healthcare 
+              with clinical excellence, strategic support, and world-class infrastructure.
             </p>
           </div>
           <div className="rounded-3xl overflow-hidden shadow-2xl animate-scale-in border border-border/50 group">

@@ -17,18 +17,18 @@ const About = () => {
               Greetings Innovators!
             </Badge>
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              GIMS Startup Clinic
+              GIMS Centre for Medical Innovation
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-6">
-              We're thrilled to announce the launch of GIMS Startup Clinic, the first of its kind 
-              Clinic for Startups in a Public Hospital! Operating every 2nd Tuesday of the month, 
-              this groundbreaking initiative opens its doors to startups nationwide, offering a 
-              comprehensive suite of services tailored to propel your healthcare and medtech ventures 
-              to success.
+              The GIMS Centre for Medical Innovation (CMI) is where clinical excellence meets visionary 
+              entrepreneurship. Located within the Government Institute of Medical Sciences, Greater Noida, 
+              CMI is India's first public hospital-based medical incubator. We exist to bridge the critical 
+              gap between real-world clinical needs and transformative healthcare solutions.
             </p>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Ready to revolutionize healthcare through entrepreneurship? Join us at GIMS Startup Clinic 
-              and let's embark on this transformative journey together!
+              By embedding startups directly within a functioning 630-bed hospital ecosystem, we enable 
+              innovators to validate ideas, access mentorship, conduct clinical trials, and create 
+              technologies that can truly change lives.
             </p>
           </div>
         </div>
@@ -38,11 +38,12 @@ const About = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold mb-4">What We Offer</h2>
+            <h2 className="text-4xl font-serif font-bold mb-4">Why CMI Matters</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              At GIMS Startup Clinic, we're your one-stop solution for all things healthcare and medtech 
-              entrepreneurship. Whether you're seeking mentorship, validation, or funding, we're here to 
-              fuel your journey towards success.
+              Great healthcare innovation cannot happen in isolation. It demands collaboration between doctors, 
+              researchers, engineers, and entrepreneurs — all grounded in real clinical challenges. CMI represents 
+              this collaborative spirit, providing the rarest opportunity: immediate clinical access combined with 
+              strategic incubation support.
             </p>
           </div>
           
@@ -134,6 +135,61 @@ const About = () => {
         </div>
       </section>
 
+      {/* Leadership Team */}
+      <section className="py-16 bg-gradient-to-br from-muted/30 to-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif font-bold mb-4">Our Leadership Team</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Guided by experienced leaders committed to transforming healthcare innovation in India
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-3xl font-bold text-white">RG</span>
+                </div>
+                <CardTitle className="text-xl font-serif">Dr. (Brig) Rakesh Gupta</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-center text-base leading-relaxed">
+                  Director, GIMS Greater Noida
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-24 h-24 bg-gradient-to-br from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-3xl font-bold text-white">MK</span>
+                </div>
+                <CardTitle className="text-xl font-serif">Dr. Mohit Kumar</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-center text-base leading-relaxed">
+                  Faculty Incharge, GIMS Incubator
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <CardHeader className="text-center pb-4">
+                <div className="w-24 h-24 bg-gradient-to-br from-accent to-accent/80 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <span className="text-3xl font-bold text-white">RS</span>
+                </div>
+                <CardTitle className="text-xl font-serif">Dr. Rahul Singh</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-center text-base leading-relaxed">
+                  Head, Centre for Medical Innovation, GIMS
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

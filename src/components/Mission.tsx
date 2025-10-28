@@ -4,28 +4,28 @@ import { Target, Users, Lightbulb, Heart, Stethoscope } from "lucide-react";
 const Mission = () => {
   const visionGoals = {
     icon: Target,
-    title: "Vision & Mission",
-    description: "As India's first public hospital-based medical incubation center at GIMS, we pioneer healthcare innovation through clinical mentorship, idea validation, and startup incubation. Join us in transforming medical technology from concept to patient care.",
+    title: "Our Mission & Vision",
+    description: "The GIMS Centre for Medical Innovation (CMI) is where clinical excellence meets visionary entrepreneurship. Located within the Government Institute of Medical Sciences, Greater Noida, CMI is India's first public hospital-based medical incubator. We bridge the critical gap between real-world clinical needs and transformative healthcare solutions.",
     goals: [
       {
-        icon: Lightbulb,
-        title: "Foster Innovation",
-        description: "Support the development and commercialization of breakthrough medical technologies and digital health solutions."
+        icon: Target,
+        title: "Our Mission",
+        description: "To empower healthcare innovators to translate ideas into validated solutions that revolutionize patient care."
       },
       {
-        icon: Users,
-        title: "Promote Collaboration",
-        description: "Bridge clinicians, researchers, and entrepreneurs to drive impactful healthcare innovations."
+        icon: Lightbulb,
+        title: "Our Vision 2030",
+        description: "To establish India's most trusted medical innovation ecosystem, propelling homegrown solutions to global impact."
       },
       {
         icon: Heart,
-        title: "Enhance Accessibility",
-        description: "Develop cost-effective medical solutions that address healthcare needs across all populations."
+        title: "Affordable Healthcare",
+        description: "Creating impactful, affordable healthcare solutions for India and beyond through indigenous innovation."
       },
       {
         icon: Stethoscope,
-        title: "Advance Research",
-        description: "Integrate cutting-edge innovations into medical education and foster continuous discovery."
+        title: "Clinical Excellence",
+        description: "Embedding startups within a 630-bed hospital ecosystem to validate ideas and conduct clinical trials."
       }
     ]
   };
@@ -59,7 +59,7 @@ const Mission = () => {
             
             {/* Title with gradient animation */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4 tracking-tight animate-fade-in-up">
-              Our Mission
+              Transforming Healthcare Through Innovation
             </h2>
             
             {/* Description with smooth fade */}

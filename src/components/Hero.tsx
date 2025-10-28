@@ -33,7 +33,7 @@ const Hero = () => {
           
           {/* Medical-Focused Main Headline */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold text-foreground mb-12 leading-[0.85] tracking-tight text-center">
-            Healing
+            Healthcare
             <span className="block bg-gradient-hero bg-clip-text text-transparent mt-2 animate-gradient">
               Innovation
             </span>
@@ -41,7 +41,7 @@ const Hero = () => {
           
           {/* Medical Mission Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 leading-relaxed max-w-3xl mx-auto font-sans text-center">
-            Empowering healthcare startups to revolutionize patient care through cutting-edge medical technology
+            India's first public hospital-based medical incubator - bridging clinical excellence and entrepreneurial spirit
           </p>
           
           {/* Medical CTA Buttons */}
@@ -65,22 +65,22 @@ const Hero = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Stethoscope className="text-white" size={28} />
               </div>
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-3">75+</div>
-              <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">Medical Startups</div>
+              <div className="text-5xl md:text-6xl font-bold text-primary mb-3">15K+</div>
+              <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">sq ft Incubation Space</div>
             </div>
             <div className="animate-scale-in bg-card/40 backdrop-blur-md p-8 rounded-2xl border border-border/30 hover:border-secondary/30 transition-all duration-500 hover:scale-105 hover:shadow-xl group" style={{ animationDelay: "0.1s" }}>
               <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="text-white" size={28} />
               </div>
-              <div className="text-5xl md:text-6xl font-bold text-secondary mb-3">₹25Cr+</div>
-              <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">Healthcare Funding</div>
+              <div className="text-5xl md:text-6xl font-bold text-secondary mb-3">630+</div>
+              <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">Bed Hospital Access</div>
             </div>
             <div className="animate-scale-in bg-card/40 backdrop-blur-md p-8 rounded-2xl border border-border/30 hover:border-accent/30 transition-all duration-500 hover:scale-105 hover:shadow-xl group" style={{ animationDelay: "0.2s" }}>
               <div className="w-16 h-16 bg-gradient-to-r from-accent to-accent/80 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Heart className="text-white" size={28} />
               </div>
-              <div className="text-5xl md:text-6xl font-bold text-accent mb-3">50K+</div>
-              <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">Lives Impacted</div>
+              <div className="text-5xl md:text-6xl font-bold text-accent mb-3">10+</div>
+              <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">Startups Incubated</div>
             </div>
           </div>
         </div>

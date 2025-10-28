@@ -2,11 +2,10 @@ import { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Import images
-import gimsStartupPoster from "@/assets/gims-startup-poster.png";
-import heroLab from "@/assets/hero-lab.jpg";
-import facilityLab from "@/assets/facility-lab.jpg";
-import collaboration from "@/assets/collaboration.jpg";
-import innovationBg from "@/assets/innovation-bg.jpg";
+import carouselImg1 from "@/assets/carousel-img-1.jpg";
+import carouselImg2 from "@/assets/carousel-img-2.jpg";
+import carouselImg3 from "@/assets/carousel-img-3.jpg";
+import carouselImg4 from "@/assets/carousel-img-4.jpg";
 
 interface CarouselSlide {
   id: number;
@@ -22,38 +21,33 @@ const ImageCarousel = () => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const messages = [
-    "Welcome Innovators",
-    "Welcome to GIMS",
-    "Next generation medical innovation",
-    "Transforming Healthcare",
+    "Welcome to GIMS CMI",
+    "1st Public Hospital Based Medical Incubation Centre",
+    "Empowering Healthcare Innovation",
+    "Where Innovation Meets Healthcare",
   ];
 
-  // Carousel slides with GIMS poster and other images
+  // Carousel slides with GIMS CMI facility images
   const slides: CarouselSlide[] = [
     {
       id: 1,
-      src: gimsStartupPoster,
-      alt: "GIMS Startup - Centre for Medical Innovation",
+      src: carouselImg1,
+      alt: "GIMS CMI - Centre for Medical Innovation",
     },
     {
       id: 2,
-      src: heroLab,
-      alt: "Advanced Medical Laboratory",
+      src: carouselImg2,
+      alt: "GIMS Medical Innovation Facilities",
     },
     {
       id: 3,
-      src: facilityLab,
-      alt: "Medical Research Facility",
+      src: carouselImg3,
+      alt: "GIMS CMI Hospital Infrastructure",
     },
     {
       id: 4,
-      src: collaboration,
-      alt: "Medical Collaboration",
-    },
-    {
-      id: 5,
-      src: innovationBg,
-      alt: "Medical Innovation",
+      src: carouselImg4,
+      alt: "GIMS Healthcare Innovation Center",
     },
   ];
 
@@ -119,11 +113,11 @@ const ImageCarousel = () => {
   };
 
   return (
-    <section className="relative w-full h-[780px] overflow-visible bg-gray-100">
+    <section className="relative w-full h-[700px] overflow-visible bg-gray-100 pt-20 pb-6">
       {/* Carousel Container */}
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full px-6 md:px-10">
         {/* Slides */}
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full py-2">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -135,7 +129,7 @@ const ImageCarousel = () => {
                 <img
                   src={slide.src}
                   alt={slide.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   loading={index === 0 ? "eager" : "lazy"}
                   decoding="async"
                 />
@@ -207,14 +201,14 @@ const ImageCarousel = () => {
                 <span className="typewriter-cursor">|</span>
               </h2>
               <p className="text-base md:text-lg text-gray-700 mb-5 animate-fade-in-delay">
-                Empowering global healthcare through innovation
+                India's first public hospital-based medical incubator
               </p>
               <div className="flex gap-3 animate-fade-in-delay-2">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-sm">
-                  Incubate with us
+                  Apply Now
                 </button>
                 <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg text-sm">
-                  News & Events
+                  Learn More
                 </button>
               </div>
             </div>

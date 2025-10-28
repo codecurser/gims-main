@@ -15,20 +15,20 @@ const Testimonial = () => {
           <Card className="p-12 md:p-16 bg-gradient-card border-2 border-primary/20 shadow-2xl animate-fade-in hover:shadow-glow transition-all duration-500">
             <Quote className="text-primary mb-8 opacity-50" size={56} />
             <blockquote className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground leading-relaxed mb-10 tracking-tight">
-              "GIMS Startup Clinic has been instrumental in transforming our healthcare innovation from concept 
-              to clinical reality. The direct access to medical professionals, hospital infrastructure, and 
-              patient validation here is unparalleled. They don't just provide incubation—they connect you with 
-              real clinical needs and help you solve them."
+              "GIMS CMI provided us the perfect ecosystem to develop and validate MATRI. From clinical 
+              mentorship to hospital infrastructure access, they supported us at every step. Showcasing on 
+              Shark Tank India was a dream, but the real success is the thousands of women we're helping 
+              with menstrual pain relief. GIMS CMI doesn't just incubate startups—they create impact."
             </blockquote>
             <div className="flex items-center space-x-5">
               <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-3xl font-bold text-primary-foreground">AK</span>
+                <span className="text-3xl font-bold text-primary-foreground">MT</span>
               </div>
               <div>
-                <div className="font-bold text-xl text-foreground mb-1">Dr. Amit Kumar</div>
-                <div className="text-muted-foreground font-medium">Founder & CEO, MedInnovate Solutions</div>
+                <div className="font-bold text-xl text-foreground mb-1">MATRI Team</div>
+                <div className="text-muted-foreground font-medium">Women's Health Innovation | Featured on Shark Tank India</div>
                 <div className="text-sm text-primary font-semibold mt-2 inline-block px-3 py-1 bg-primary/10 rounded-full">
-                  Incubated 2023 | ₹2.5Cr Funded
+                  Incubated 2024 | Shark Tank Showcase
                 </div>
               </div>
             </div>
