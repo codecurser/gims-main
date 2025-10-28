@@ -78,15 +78,6 @@ const Startups = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Startup Ecosystem Banner */}
-        <div className="rounded-3xl overflow-hidden shadow-2xl mb-12 animate-fade-in border border-border/40 max-w-7xl mx-auto">
-          <img 
-            src={startupEcosystemBanner} 
-            alt="GIMS CMI Startup Ecosystem" 
-            className="w-full h-[400px] md:h-[500px] object-cover"
-          />
-        </div>
-
         <div className="text-center max-w-5xl mx-auto mb-12 animate-fade-in">
           <div className="inline-block mb-4">
             <div className="w-20 h-0.5 bg-gradient-hero mx-auto mb-2"></div>
@@ -164,6 +155,15 @@ const Startups = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Startup Ecosystem Banner */}
+        <div className="rounded-3xl overflow-hidden shadow-2xl mt-16 animate-fade-in border border-border/40 max-w-7xl mx-auto">
+          <img 
+            src={startupEcosystemBanner} 
+            alt="GIMS CMI Startup Ecosystem" 
+            className="w-full h-[400px] md:h-[500px] object-cover"
+          />
         </div>
       </div>
     </section>
