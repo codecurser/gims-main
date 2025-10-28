@@ -102,54 +102,54 @@ const Startups = () => {
         </div>
 
         {/* Enhanced Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <Card 
               key={index}
-              className="p-10 text-center bg-gradient-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 animate-scale-in hover:-translate-y-2 group"
+              className="p-6 text-center bg-gradient-card border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-500 animate-scale-in hover:-translate-y-2 group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 bg-gradient-hero rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                <stat.icon className="text-primary-foreground" size={32} />
+              <div className="w-12 h-12 bg-gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <stat.icon className="text-primary-foreground" size={24} />
               </div>
-              <div className="text-5xl font-bold text-foreground mb-3">{stat.value}</div>
-              <div className="text-lg font-medium text-muted-foreground">{stat.label}</div>
+              <div className="text-3xl font-bold text-foreground mb-2">{stat.value}</div>
+              <div className="text-sm font-medium text-muted-foreground">{stat.label}</div>
             </Card>
           ))}
         </div>
 
         {/* Enhanced Medical Startup Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {startups.map((startup, index) => (
             <Card 
               key={index}
-              className="p-10 bg-gradient-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 animate-fade-in-up group text-center relative overflow-hidden"
+              className="p-6 bg-gradient-card border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up group text-center relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Medical-themed background accent */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-hero opacity-5 rounded-full -translate-y-12 translate-x-12 group-hover:scale-125 transition-transform duration-700"></div>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-hero opacity-5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-125 transition-transform duration-700"></div>
               
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-xl">
-                  <startup.icon className="text-primary-foreground" size={30} />
+                <div className="w-12 h-12 bg-gradient-hero rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                  <startup.icon className="text-primary-foreground" size={22} />
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4 tracking-tight text-center">{startup.name}</h3>
+                <h3 className="text-xl font-serif font-bold text-foreground mb-3 tracking-tight text-center">{startup.name}</h3>
                 
-                <div className="flex justify-center gap-3 mb-6">
-                  <Badge className={`${startup.color} text-sm font-semibold px-4 py-2`}>{startup.sector}</Badge>
-                  <Badge variant="outline" className="font-semibold border-2 text-sm px-4 py-2">{startup.funding}</Badge>
+                <div className="flex justify-center gap-2 mb-4">
+                  <Badge className={`${startup.color} text-xs font-semibold px-3 py-1`}>{startup.sector}</Badge>
+                  <Badge variant="outline" className="font-semibold border-2 text-xs px-3 py-1">{startup.funding}</Badge>
                 </div>
                 
-                <p className="text-muted-foreground mb-6 leading-relaxed text-center">{startup.achievement}</p>
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed text-center">{startup.achievement}</p>
                 
-                <div className="flex items-center justify-center text-lg text-primary font-semibold group-hover:translate-x-1 transition-transform mb-4">
-                  <Heart size={20} className="mr-3" />
+                <div className="flex items-center justify-center text-sm text-primary font-semibold group-hover:translate-x-1 transition-transform mb-3">
+                  <Heart size={16} className="mr-2" />
                   {startup.patients} Patients
                 </div>
                 
-                <div className="flex items-center justify-center text-sm text-muted-foreground">
-                  <TrendingUp size={16} className="mr-2" />
+                <div className="flex items-center justify-center text-xs text-muted-foreground">
+                  <TrendingUp size={14} className="mr-2" />
                   Growing rapidly
                 </div>
               </div>
