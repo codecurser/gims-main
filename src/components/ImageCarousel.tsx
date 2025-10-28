@@ -196,11 +196,21 @@ const ImageCarousel = () => {
             
             {/* Text Content - Compact */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pt-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-3 h-12 flex items-center">
-                {typewriterText}
-                <span className="typewriter-cursor">|</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 h-16 flex items-center">
+                {(() => {
+                  const words = typewriterText.split(' ');
+                  const firstTwoWords = words.slice(0, 2).join(' ');
+                  const remainingWords = words.slice(2).join(' ');
+                  return (
+                    <>
+                      <span className="text-teal-600">{firstTwoWords}</span>
+                      {remainingWords && <span className="text-blue-700 ml-2">{remainingWords}</span>}
+                    </>
+                  );
+                })()}
+                <span className="typewriter-cursor text-blue-700">|</span>
               </h2>
-              <p className="text-base md:text-lg text-gray-700 mb-5 animate-fade-in-delay">
+              <p className="text-lg md:text-xl text-gray-700 mb-5 animate-fade-in-delay">
                 India's first public hospital-based medical incubator
               </p>
               <div className="flex gap-3 animate-fade-in-delay-2">
